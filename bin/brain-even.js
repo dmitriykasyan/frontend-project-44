@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-const getName = (str) => {
+const getAnswer = (str) => {
   return readlineSync.question(str);
 };
 
-const checkAnswer = (answer, number) => {
+const checkAnswer = (number, answer = 'no') => {
   let evenNum = number % 2;
 
   if (((evenNum === 0) && (answer === 'yes')) || 
@@ -16,7 +16,7 @@ const checkAnswer = (answer, number) => {
 
 let winCounter = 0;
 let negAnswer;
-let name = getName('May I have your name? ')
+let name = getAnswer('May I have your name? ')
 
 console.log('Welcome to the Brain Games!');
 console.log(`Hello, ${name}`);
@@ -25,9 +25,12 @@ console.log('Answer "yes" if the number is even, otherwise answer "no".');
 while (winCounter <= 2) {
   let number = Math.round(Math.random()*100);
   console.log(`Question: ${number}`);
-  const answer = readlineSync.question('Your answer: ');
+  var answer = getAnswer('Your answer: ');
+  if ((answer !== 'yes') || (answer !== 'no')) {
+    answer = 'no';
+  }
   answer === 'yes' ? negAnswer = 'no' : negAnswer = 'yes';
-  if (checkAnswer(answer,number) === true) {
+  if (checkAnswer(number,answer) === true) {
     winCounter += 1;
     console.log ('Correct!');
   }
