@@ -5,7 +5,7 @@ const getAnswer = (str) => {
   return readlineSync.question(str);
 };
 
-const checkAnswer = (number, answer = 'no') => {
+const checkAnswer = (number, answer) => {
   let evenNum = number % 2;
 
   if (((evenNum === 0) && (answer === 'yes')) || 
@@ -22,13 +22,13 @@ console.log('Welcome to the Brain Games!');
 console.log(`Hello, ${name}`);
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-while (winCounter <= 2) {
+for (let i=0; i <= 2; i ++) {
   let number = Math.round(Math.random()*100);
   console.log(`Question: ${number}`);
   var answer = getAnswer('Your answer: ');
-  if ((answer !== 'yes') || (answer !== 'no')) {
-    answer = 'no';
-  }
+  // if ((answer !== 'yes') || (answer !== 'no')) {
+  //   answer = 'no';
+  // }
   answer === 'yes' ? negAnswer = 'no' : negAnswer = 'yes';
   if (checkAnswer(number,answer) === true) {
     winCounter += 1;
@@ -38,5 +38,4 @@ while (winCounter <= 2) {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${negAnswer}'`);
   }
 }
-
-console.log(`Congratulations, ${name}!`);
+if (winCounter === 3) console.log(`Congratulations, ${name}!`);
