@@ -25,9 +25,25 @@ const getArithExp = (num1, num2, num3) => {
   }
 };
 
-let a = getArithExp(getRandomInt(), getRandomInt(), getRandomInt(3)); 
-console.log(`result ${a}, ${typeof(a)}`);
-let b = parseInt(getAnswer('Your answer: '));
-(a === b) ? console.log ('Correct!') : 
-  console.log (`'${b}' is wrong answer ;(. Correct answer was '${a}'.
-Let's try again, Sam!`);
+
+let winCounter = 0;
+
+let name = getAnswer(`May I have your name? `);
+console.log(`Welcome to the Brain Games!`);
+console.log(`Hello, ${name}
+What is the result of the expression?`);
+
+for (let i = 0; i <= 2; i++ ){
+  let resultExpression = getArithExp(getRandomInt(), getRandomInt(), getRandomInt(3));
+  // console.log(`result ${resultExpression}, ${typeof(resultExpression)}`);  //result expession
+  let calcResult = parseInt(getAnswer('Your answer: '));
+
+  resultExpression === calcResult ? (
+    console.log ('Correct!'), winCounter += 1
+  ) :
+    console.log (`'${calcResult}' is wrong answer ;(. Correct answer was '${resultExpression}'.
+Let's try again, ${name}!`);
+}
+if (winCounter === 3) {
+  console.log(`Congratulations, ${name}!`);
+}
