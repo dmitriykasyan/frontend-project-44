@@ -4,3 +4,5 @@
 
 
 [How to play brain-even](https://asciinema.org/a/pxZ5wOiGJxwIHzjvHaezCLxsl)
+
+[How to play brain-calc](https://asciinema.org/a/7cDXsqJ8NMSdqm9xuDYkiTaTs)
