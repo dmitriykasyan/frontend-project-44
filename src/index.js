@@ -4,8 +4,8 @@ const getAnswer = (str) => {
   return readlineSync.question(str);
 };
 
-const getRandomInt = (x = 99) => {
-  return Math.floor(Math.random() * x);
+const getRandomInt = (min = 0, max = 99) => {
+  return Math.floor(Math.random() * (max - min) + min);
 };
 
 const getArithExp = (num1, num2, num3) => {

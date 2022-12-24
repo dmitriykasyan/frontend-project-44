@@ -6,3 +6,6 @@
 [How to play brain-even](https://asciinema.org/a/pxZ5wOiGJxwIHzjvHaezCLxsl)
 
 [How to play brain-calc](https://asciinema.org/a/7cDXsqJ8NMSdqm9xuDYkiTaTs)
+
+[How to play brain-gcd](https://asciinema.org/a/GzyYYYY7GA8WIFQFQo7gdJrZZ)
+
