@@ -23,4 +23,16 @@ const getArithExp = (num1, num2, num3) => {
   }
 };
 
-export {getAnswer, getArithExp, getRandomInt};
+const getDelimiterArray = (num) => {
+  // console.log('number',num);
+  const res = [];
+  for (let i = 1; i <= num; i++ ) {
+    if ((num % i) === 0) {
+      res.push(i);
+    }
+  }
+  // console.log('delimeters = ',res);
+  return res;
+};
+
+export {getAnswer, getArithExp, getRandomInt, getDelimiterArray};
