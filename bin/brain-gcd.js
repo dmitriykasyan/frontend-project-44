@@ -18,7 +18,9 @@ let a = (getDelimiterArray(getRandomInt()));
 let b = (getDelimiterArray(getRandomInt()));
 console.log(a);
 console.log(b);
-console.log(_.intersection(a,b));
+//проверка нулевого значения
+
+// console.log(_.intersection(a,b));
 // Question: 25 50
 
 // let winCounter = 0;
