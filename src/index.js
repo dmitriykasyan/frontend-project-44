@@ -35,4 +35,13 @@ const getDelimiterArray = (num) => {
   return res;
 };
 
-export {getAnswer, getArithExp, getRandomInt, getDelimiterArray};
+const getProgression = (start, step, elem = 10) => {
+  const resProgression = [];
+  let a = start;
+  for (let i = 1; i <= elem; i++ ) {
+    resProgression.push(a + ((i-1)*step));
+  }
+  return resProgression;
+};
+
+export {getAnswer, getArithExp, getRandomInt, getDelimiterArray, getProgression};

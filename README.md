@@ -9,3 +9,4 @@
 
 [How to play brain-gcd](https://asciinema.org/a/GzyYYYY7GA8WIFQFQo7gdJrZZ)
 
+[How to play brain-progression](https://asciinema.org/a/GlgsztQUawmJh3MyAuj0s7e8f)
