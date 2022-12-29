@@ -9,4 +9,12 @@
 
 [How to play brain-gcd](https://asciinema.org/a/GzyYYYY7GA8WIFQFQo7gdJrZZ)
 
+[![asciicast](https://asciinema.org/a/GzyYYYY7GA8WIFQFQo7gdJrZZ.svg)](https://asciinema.org/a/GzyYYYY7GA8WIFQFQo7gdJrZZ)
+
 [How to play brain-progression](https://asciinema.org/a/GlgsztQUawmJh3MyAuj0s7e8f)
+
+[![asciicast](https://asciinema.org/a/GlgsztQUawmJh3MyAuj0s7e8f.svg)](https://asciinema.org/a/GlgsztQUawmJh3MyAuj0s7e8f)
+
+[How to play brain-prime](https://asciinema.org/a/rRM7o8PapOaxMulHE0lgWQ4iN)
+
+[![asciicast](https://asciinema.org/a/rRM7o8PapOaxMulHE0lgWQ4iN.svg)](https://asciinema.org/a/rRM7o8PapOaxMulHE0lgWQ4iN)

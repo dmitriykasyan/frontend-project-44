@@ -18,8 +18,7 @@ for (let i=0; i <= 2; i++){
   // console.log ('НОД = ',gcd);
   let ans = parseInt(getAnswer ('Your answer: '));
   ans === gcd ? (console.log('Correct !'), winCounter += 1) 
-              : console.log(`Your answer: 1
-'${ans}' is wrong answer ;(. Correct answer was '${gcd}'.
+              : console.log(`Your answer: '${ans}' is wrong answer ;(. Correct answer was '${gcd}'.
 Let's try again, ${name}!`)
 }
 if (winCounter === 3) {
