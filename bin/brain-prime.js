@@ -7,7 +7,7 @@ let correctAnswer;
 console.log(`Welcome to the Brain Games!`);
 let name = getAnswer(`May I have your name? `);
 console.log(`Hello, ${name}`);
-console.log(`What number is missing in the progression?`);
+console.log(`Answer "yes" if given number is prime. Otherwise answer "no".`);
 for (let i = 0; i <= 2; i++) {
   let num =getRandomInt(2,99);
   let dividerLength = getDelimiterArray(num).length;
