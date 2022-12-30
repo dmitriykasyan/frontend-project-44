@@ -15,7 +15,6 @@ const checkAnswer = (number, answer) => {
 };
 
 let winCounter = 0;
-let negAnswer;
 let correctAnswer;
 let name = getAnswer('May I have your name? ')
 
