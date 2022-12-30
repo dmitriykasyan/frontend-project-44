@@ -4,8 +4,6 @@ import { getAnswer, getArithExp, getRandomInt } from '../src/index.js';
 
 let winCounter = 0;
 
-var name = getAnswer('May I have your name? ');
-console.log('Welcome to the Brain Games!');
 console.log(`Hello, ${name}
 What is the result of the expression?`);
 
