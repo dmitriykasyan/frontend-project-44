@@ -38,7 +38,8 @@ for (let i=0; i <= 2; i ++) {
     console.log ('Correct!');
   }
   else {
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'
+Let's try again, ${name}!`);
   }
 }
 if (winCounter === 3) console.log(`Congratulations, ${name}!`);
