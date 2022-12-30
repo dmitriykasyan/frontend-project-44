@@ -40,6 +40,7 @@ for (let i=0; i <= 2; i ++) {
   else {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'
 Let's try again, ${name}!`);
+    break;
   }
 }
 if (winCounter === 3) console.log(`Congratulations, ${name}!`);

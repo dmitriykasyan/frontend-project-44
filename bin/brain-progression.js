@@ -16,11 +16,14 @@ for (let i = 0; i <= 2; i++){
   console.log(`Question: ${progression.join(' ')}`);
   // console.log(`Removed ${removed}`);
   let ans = parseInt(getAnswer('Your answer: '));
-  ans === removed[0] ? 
-    (console.log('Correct !'), winCounter += 1
-    ) : 
+  if (ans === removed[0]) { 
+    console.log('Correct !');
+     winCounter += 1
+  }
+  else {
     console.log(`Your answer: '${ans}' is wrong answer ;(. Correct answer was '${removed[0]}'.
 Let's try again, ${name}!`);
+    break;}
 }
 if (winCounter === 3) {
   console.log(`Congratulations, ${name}!`);

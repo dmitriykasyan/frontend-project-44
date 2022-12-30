@@ -17,9 +17,15 @@ for (let i=0; i <= 2; i++){
   console.log (`Question: ${num1} ${num2}`);
   // console.log ('НОД = ',gcd);
   let ans = parseInt(getAnswer ('Your answer: '));
-  ans === gcd ? (console.log('Correct !'), winCounter += 1) 
-              : console.log(`Your answer: '${ans}' is wrong answer ;(. Correct answer was '${gcd}'.
-Let's try again, ${name}!`)
+  if (ans === gcd) {
+    console.log('Correct !');
+    winCounter += 1;
+  }
+  else {
+    console.log(`Your answer: '${ans}' is wrong answer ;(. Correct answer was '${gcd}'.
+Let's try again, ${name}!`);
+  break;
+  }
 }
 if (winCounter === 3) {
   console.log(`Congratulations, ${name}!`);

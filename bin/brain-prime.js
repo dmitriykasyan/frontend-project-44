@@ -21,6 +21,7 @@ for (let i = 0; i <= 2; i++) {
   else {
     console.log(`Your answer: '${ans}' is wrong answer ;(. Correct answer was '${correctAnswer}'.
 Let's try again, ${name}!`);
+  break;
   }
 }
 if (winCounter === 3){

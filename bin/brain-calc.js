@@ -15,12 +15,17 @@ for (let i = 0; i <= 2; i++ ){
   // console.log (`Question: ${resultExpression}`);
   let calcResult = parseInt(getAnswer('Your answer: '));
 
-  resultExpression === calcResult ? (
-    console.log ('Correct!'), winCounter += 1
-  ) :
+  if (resultExpression === calcResult) {
+    console.log ('Correct!');
+    winCounter += 1;
+  }
+  else {
     console.log (`'${calcResult}' is wrong answer ;(. Correct answer was '${resultExpression}'.
 Let's try again, ${name}!`);
+    break;
+  }
 }
+
 if (winCounter === 3) {
   console.log(`Congratulations, ${name}!`);
 }
