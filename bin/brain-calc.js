@@ -1,17 +1,17 @@
 #!/usr/bin/env node
 
-import {getAnswer, getArithExp, getRandomInt} from "../src/index.js";
+import { getAnswer, getArithExp, getRandomInt } from '../src/index.js';
 
 let winCounter = 0;
 
-let name = getAnswer(`May I have your name? `);
-console.log(`Welcome to the Brain Games!`);
+var name = getAnswer('May I have your name? ');
+console.log('Welcome to the Brain Games!');
 console.log(`Hello, ${name}
 What is the result of the expression?`);
 
-for (let i = 0; i <= 2; i++ ){
-  let resultExpression = getArithExp(getRandomInt(), getRandomInt(), getRandomInt(0,3));
-  let calcResult = parseInt(getAnswer('Your answer: '));
+for (let i = 0; i <= 2; i += 1 ) {
+  let resultExpression = getArithExp (getRandomInt(), getRandomInt(), getRandomInt(0, 3));
+  var calcResult = parseInt (getAnswer ('Your answer: '));
 
   if (resultExpression === calcResult) {
     console.log ('Correct!');
