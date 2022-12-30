@@ -16,6 +16,7 @@ const checkAnswer = (number, answer) => {
 
 let winCounter = 0;
 let negAnswer;
+let correctAnswer;
 let name = getAnswer('May I have your name? ')
 
 console.log('Welcome to the Brain Games!');
@@ -29,13 +30,15 @@ for (let i=0; i <= 2; i ++) {
   // if ((answer !== 'yes') || (answer !== 'no')) {
   //   answer = 'no';
   // }
-  answer === 'yes' ? negAnswer = 'no' : negAnswer = 'yes';
+
+  (number % 2) === 0 ? correctAnswer = 'yes' : correctAnswer = 'no';
+
   if (checkAnswer(number,answer) === true) {
     winCounter += 1;
     console.log ('Correct!');
   }
   else {
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${negAnswer}'`);
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
   }
 }
 if (winCounter === 3) console.log(`Congratulations, ${name}!`);
