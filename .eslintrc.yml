@@ -6,7 +6,7 @@ env:
 
 extends: 
  - 'airbnb-base'
- - 'plugin: import'
+#  - 'plugin: import'
 
 overrides: []
 
