@@ -7,4 +7,4 @@ const getName = (myQuestion) => {
   return `Hello, ${name}!`;
 };
 
-export default { getName };
+export default getName;
