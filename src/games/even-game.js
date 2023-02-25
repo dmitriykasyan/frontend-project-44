@@ -1,20 +1,20 @@
 #!/usr/bin/env node
 import runGame from '../index.js';
-import { getRandomInt } from "../tools.js";
+import { getRandomInt } from '../tools.js';
 
-const description = 'Answer "yes" if the number is even, otherwise answer "no".'
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const gameResult = () => { //number, answer
+const gameResult = () => {
   const number = getRandomInt(1);
   const evenNum = number % 2;
-  var correctAnswer = '';
+  let correctAnswer = '';
   if (evenNum === 0) {
     correctAnswer = 'yes';
   } else {
     correctAnswer = 'no';
   }
 
-  return [number.toString(), correctAnswer]
+  return [number.toString(), correctAnswer];
 };
 
 const evenGame = () => {

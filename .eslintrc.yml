@@ -4,6 +4,9 @@ env:
   # es2021: true
   node: true
 
+plugins:
+  - "import"
+
 extends: 
  - 'airbnb-base'
 #  - 'plugin: import'
@@ -14,9 +17,6 @@ parserOptions:
   ecmaVersion: latest
   # sourceType: module
   
-plugins:
-  - "import"
-
 rules:
   no-console: 0
   import/extensions:
