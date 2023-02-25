@@ -1,55 +1,25 @@
+#!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-const getAnswer = (str) => {
-  const sting = readlineSync.question(str);
-  return sting;
-};
+const runGame = (description, gameResult) => {
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ')
+  console.log(`Hello, ${name}`);
+  console.log(description);
 
-const getRandomInt = (min = 0, max = 99) => {
-  const rndInt = Math.floor(Math.random() * (max - min) + min);
-  return rndInt;
-};
-
-const getArithExp = (num1, num2, num3) => {
-  switch (num3) {
-    case 0:
-      console.log(`Question: ${num1} + ${num2}`);
-      return num1 + num2;
-    case 1:
-      console.log(`Question: ${num1} - ${num2}`);
-      return num1 - num2;
-    case 2:
-      console.log(`Question: ${num1} * ${num2}`);
-      return num1 * num2;
-    // no default
-  }
-  return null;
-};
-
-const getDelimiterArray = (num) => {
-  // console.log('number',num);
-  const res = [];
-  for (let i = 1; i <= num; i += 1) {
-    if ((num % i) === 0) {
-      res.push(i);
+  for(let i = 0; i <= 2; i += 1) {
+    const [number, correctAnswer] = gameResult();
+    console.log(`Question: ${number}`);
+    const answer = readlineSync.question('You answer: ');
+    if(answer === correctAnswer) {
+      console.log('Correct!');
+    } else {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
+      console.log(`Let's try again, ${name}!`);
+      return;
     }
   }
-  return res;
+  console.log(`Congratulations, ${name}!`);
 };
 
-const getProgression = (start, step, elem = 10) => {
-  const resProgression = [];
-  const a = start;
-  for (let i = 1; i <= elem; i += 1) {
-    resProgression.push(a + ((i - 1) * step));
-  }
-  return resProgression;
-};
-
-export {
-  getAnswer,
-  getArithExp,
-  getRandomInt,
-  getDelimiterArray,
-  getProgression,
-};
+export default runGame;
